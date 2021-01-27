@@ -2,7 +2,7 @@
 
 ## Lower Heading
 
-This program with be a database that contains test information.
+This program will be a database that contains test information.
 
 This is a new paragraph.
 
@@ -15,4 +15,4 @@ This is a new paragraph.
 * list
 
 ## Another heading
-need to add information
+Add information here
