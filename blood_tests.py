@@ -24,6 +24,17 @@ def check_HDL(user_hdl):
         hdl_level = "Low"
     return hdl_level
 
+def check_LDL(user_ldl):
+    if user_ldl < 130:
+        ldl_level = "Normal"
+    elif 130 <= user_ldl <= 159:
+        ldl_level = "Borderline High"
+    elif 160 <= user_ldl <= 189:
+        ldl_level = "High"
+    else:
+        ldl_level = "Very High"
+    return ldl_level
+
 def HDL_driver():
     hdl = interface()
     hdl = int(hdl)
