@@ -3,6 +3,7 @@ def interface():
     while True:
         print("\nOptions")
         print("1 - HDL Analysis")
+        print("2 - LDL Analysis")
         print("9 - Quit")
         choice = input("Enter an option: ") # input will always return a string
         if choice == "9":
@@ -10,6 +11,9 @@ def interface():
         elif choice == "1":
             hdl = input("\nPlease enter your HDL value: ")
             return hdl
+        elif choice == "2":
+            hdl = input("\nPlease enter your LDL value: ")
+            return ldl
 
 def check_HDL(user_hdl):
     if user_hdl >= 60:
