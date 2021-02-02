@@ -50,4 +50,5 @@ def analysis_driver():
         print("Your LDL value is " + str(ldl))
         print(ldl_level)
 
-analysis_driver()
+if __name__ == "__main__":
+    analysis_driver()
