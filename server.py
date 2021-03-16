@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import sys
 
 app = Flask(__name__)
 
@@ -21,7 +22,8 @@ def HDL_request():
     """
     from blood_tests import check_HDL
     in_data = request.get_json()
-    print(in_data)
+    print(in_data, file=sys.stderr)
+    #sys.stdout.flush()     use if remove file=sys.stderr above
     HDL = in_data["HDL"]
     result = check_HDL(HDL)
     answer = {"HDL": HDL, "Analysis": result}
