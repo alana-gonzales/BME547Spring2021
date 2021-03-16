@@ -11,6 +11,7 @@ def server_status():
 @app.route("/info", methods=["GET"])
 def information():
     output = "This server will allow the user to request blood analyses"
+    print("hello")
     return output
 
 
@@ -39,4 +40,5 @@ def say_hello_function(person, age):
 
 
 if __name__ == '__main__':
+    print("here")
     app.run()
