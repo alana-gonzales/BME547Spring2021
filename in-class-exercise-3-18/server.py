@@ -6,6 +6,7 @@ app = Flask(__name__)
 db = list()
 test_db = list()
 
+
 def init_server():
     add_patient_to_db("Ann Ables", 101, "A+")
     add_patient_to_db("Bob Boyles", 102, "B-")
@@ -13,7 +14,8 @@ def init_server():
 
 
 def add_patient_to_db(name, id, blood_type):
-    new_patient = {"name": name, "id": id, "blood_type": blood_type, "test": list()}
+    new_patient = {"name": name, "id": id,
+                   "blood_type": blood_type, "test": list()}
     db.append(new_patient)
     print(db)
     sys.stdout.flush()
@@ -83,7 +85,10 @@ def get_results_for_id(patient_id):
         if int(test["id"]) == int(patient_id):
             test_type = test["test_name"]
             result = test["test_result"]
-    print("For id {}, the test result for {} is {}".format(str(patient_id), str(test_type), str(result)))
+    print("For id {}, the test result for {} is {}".format(
+                                                           str(patient_id),
+                                                           str(test_type),
+                                                           str(result)))
     sys.stdout.flush()
     return str(result)
 
@@ -91,4 +96,3 @@ def get_results_for_id(patient_id):
 if __name__ == '__main__':
     init_server()
     app.run()
- 
